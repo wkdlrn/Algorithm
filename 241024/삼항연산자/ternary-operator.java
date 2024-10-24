@@ -5,7 +5,8 @@ public class Main {
         
         int n = sc.nextInt();
 
-        String grade = (n >= 100) ? "pass" : "failure";
-        System.out.println(grade);
+        // String grade = (n == 100) ? "pass" : "failure";
+        // System.out.println(grade);
+        System.out.println( n == 100 ? "pass" : "failure");
     }
 }
