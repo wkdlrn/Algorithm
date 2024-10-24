@@ -5,13 +5,9 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        int max;
+        int max = a > b ? a : b;
 
-        if(a > b) {
-            max = a;
-        } else {
-            max = b;
-        }
+        
         System.out.println(max);
     }
 }
