@@ -11,6 +11,8 @@ public class Main {
             System.out.println("Tom");
         } else if (n == 3) {
             System.out.println("Paul");
+        } else {
+            System.out.println("Vacancy");
         }
     }
 }
