@@ -8,41 +8,16 @@ public class Main {
         int c = sc.nextInt();
 
         int min = a;
-        if(a > b) {
-            if (b > c) {
-                min = c;
-            } else if (b < c) {
-                min = b;
-            } else if ( b == c) {
-                min = b = c;
-            }
-        } else if (a < b) {
-            if (a > c) {
-                min = c;
-            } else if ( a < c) {
-                min = a;
-            } else if ( a == c) {
-                min = a = c;
-            }
-        } else  {
-            if(a>c) {
-                min = c;
-            } else if (a < c) {
-                min = a = b;
-            }
+        if(b < min) {
+            min = b;
+        }
+        if (c < min) {
+            min = c;
         }
 
-        if (a == b && a == c && a== min) {
-            System.out.print("1");
-        } else {
-            System.out.print("0");
-        }
+        System.out.print((a==min) ? "1" : "0");
 
-        if(a==b&&a==c) {
-            System.out.print(" 1");
-        } else {
-            System.out.print(" 0");
-        }
+        System.out.println((a == b && a == c) ? " 1" : " 0");
 
 
 
