@@ -7,17 +7,15 @@ public class Main {
         int b = sc.nextInt();
         int c = sc.nextInt();
 
-        int middle;
-        middle = a;
+       if (a > b && a < c || a > c && a < b) {
+        System.out.println(a);
+       } else if ( b > a && b < c || b > c && b < a) {
+        System.out.println(b);
+       } else {
+        System.out.println(c);
+       }
 
-        if (middle > b) {
-            if (middle < c) {
-                middle = a;
-            } else if (b > c) {
-                middle = b;
-            } else {
-                middle = c;
-            }
-    } System.out.println(middle);
-}
+        
+        
+    } 
 }
