@@ -4,6 +4,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        System.out.printf("%.20f",(double) a/b);
+        double result = (double) a / b;
+        System.out.printf("%.20f",result);
     }
 }
