@@ -9,11 +9,10 @@ public class Main {
         boolean satisfied = false;
 
         for(int i = a; i <= b; i++) {
-            if(i / 1920 == 0 || i / 2880 == 0) {
+            if(1920 % i == 0 && 2880 % i == 0) {
                 satisfied = true;
-            } else {
-                satisfied = false;
-            }
+
+            } 
         }
         if (satisfied == true) {
             System.out.println("1");
