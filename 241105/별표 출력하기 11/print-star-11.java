@@ -7,13 +7,13 @@ public class Main {
 
         for(int i = 0; i < (2*n + 1); i++) {
             if(i % 2 == 0) {
-                for(int j = 0; j < 7; j++) {
+                for(int j = 0; j < 2 * n + 1; j++) {
                     System.out.print("* ");
                 }
                 
             }
             else {
-                for(int j = 0; j < 4; j ++) {
+                for(int j = 0; j < n + 1; j ++) {
                     System.out.print("*   ");
                 }
             }
