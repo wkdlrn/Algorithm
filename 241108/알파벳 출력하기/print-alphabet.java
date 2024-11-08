@@ -10,6 +10,9 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < i + 1; j++) {
+                if (x == '[') {
+                    x= 'A';
+                }
                 System.out.print(x);
                 x++;
             }
