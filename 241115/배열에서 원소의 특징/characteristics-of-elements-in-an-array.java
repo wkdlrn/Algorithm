@@ -9,8 +9,8 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         for (int i = 0; i < 10; i++) {
-            if (( i + 1) % 3 == 0) {
-                System.out.println((i));
+            if (arr[i] % 3 == 0) {
+                System.out.println(arr[i-1]);
                 break;
             }
 
