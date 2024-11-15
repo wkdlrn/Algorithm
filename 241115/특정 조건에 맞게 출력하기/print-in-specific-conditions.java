@@ -9,9 +9,6 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             if (sc.hasNextInt()) {
                 arr[i] = sc.nextInt();
-            } else {
-                System.out.println("10개의 정수를 입력해야 합니다.");
-                return; // 입력 부족 시 프로그램 종료
             }
         }
 
