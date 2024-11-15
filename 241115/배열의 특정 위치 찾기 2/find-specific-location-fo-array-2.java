@@ -17,7 +17,9 @@ public class Main {
                 evensum += arr[i];
             }
         }
-        System.out.println(oddsum - evensum);
+        int result = oddsum > evensum ? oddsum - evensum : evensum - oddsum;
+
+        System.out.println(result);
 
     }
 }
