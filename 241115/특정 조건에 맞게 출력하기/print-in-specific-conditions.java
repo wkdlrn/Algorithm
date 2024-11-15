@@ -11,11 +11,12 @@ public class Main {
             if(arr[i] % 2 == 1) {
                 arr[i] = arr[i] + 3;
             } else {
+                if (arr[i] == 0) {
+                    break;
+                }
                 arr[i] = arr[i] / 2;
             }
-            if(arr[i] == 0) {
-                break;
-            }
+
             System.out.print(arr[i] + " ");
         }
     }
