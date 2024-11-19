@@ -18,9 +18,9 @@ public class Main {
         }
         } else {
              for (int j = 1; j <= 9; j++) {
-            for (int i = b; i >=a; i--) {
+            for (int i = a; i >=b; i--) {
                 System.out.print(i + " * " + j + " = " + (i * j));
-                if (i > a) { // 마지막 단이 아니면 공백 추가
+                if (i > b) { // 마지막 단이 아니면 공백 추가
                     System.out.print("  ");
                 }
             }
