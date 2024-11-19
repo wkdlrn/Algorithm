@@ -36,6 +36,6 @@ public class Main {
                 totalSum += anInt;
             }
         }
-        System.out.println((double) totalSum / 8);
+        System.out.printf("%.1f ",((double) totalSum / 8));
     }
 }
