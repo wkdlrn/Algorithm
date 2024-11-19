@@ -10,26 +10,23 @@ public class Main {
         for (int i = 0; i < n; i++) {
             cars[i] = sc.nextInt();
         }
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-        int idx = 0;
+
+        int min = Integer.MAX_VALUE; // 현재까지의 최솟값
+        int maxProfit = 0; // 최대 이익
 
         for (int i = 0; i < n; i++) {
+            // 현재 값이 최솟값보다 작다면 최솟값 갱신
             if (cars[i] < min) {
                 min = cars[i];
-                idx = i;
             }
-        }
-        for (int j =  idx; j < n; j++) {
-            if (cars[j] > max) {
-                max = cars[j];
+
+            // 현재 값에서 최솟값을 뺀 값(현재 이익)을 계산하여 최대 이익 갱신
+            int profit = cars[i] - min;
+            if (profit > maxProfit) {
+                maxProfit = profit;
             }
-        }
-        if (max - min  > 0) {
-            System.out.println(max - min);
-        } else {
-            System.out.println("0");
         }
 
+        System.out.println(maxProfit);
     }
 }
