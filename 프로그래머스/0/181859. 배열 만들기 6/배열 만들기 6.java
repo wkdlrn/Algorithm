@@ -7,7 +7,7 @@ class Solution {
             if(stkList.isEmpty()) {
                 stkList.add(arr[i]);
             } else {
-                if(stkList.get(stkList.size() -1).equals(arr[i])) {
+                if(stkList.get(stkList.size() -1) == (arr[i])) {
                     stkList.remove(stkList.size()-1);
                 } else {
                     stkList.add(arr[i]);
