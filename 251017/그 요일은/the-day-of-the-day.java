@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,29 +9,17 @@ public class Main {
         int d2 = sc.nextInt(); // 목표 날짜 일
 
         int[] months = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
-
       
         int start = d1;
         for (int i = 1; i < m1; i++) start += months[i];
-
         
         int end = d2;
         for (int i = 1; i < m2; i++) end += months[i];
-
-        if (start < end) {
-            int diff = end - start;
-            int result = diff / 7;
-            System.out.println(result+1);
-            
-        } else {
-            int diff = start - end;
-            int result = diff / 7;
-            System.out.println(result+1);
-            
-        }
+        
+        int diff = Math.abs(end - start);
+        int ret = diff/7 + 1;
+        System.out.println(ret);
         
 
-        
     }
 }
