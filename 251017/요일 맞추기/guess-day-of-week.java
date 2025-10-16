@@ -23,13 +23,12 @@ public class Main {
 
         int diff = end - start;
 
-        int base = 1;
-        int ret = (base + diff) % 7;
-        if(result < 0) {
-            result += 7;
         
-    
+        int ret =  diff % 7;
+        if(ret < 0) {
+            ret += 7;
         }
+        System.out.println(days[ret]);
     }
 
 }
