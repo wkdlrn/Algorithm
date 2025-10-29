@@ -2,61 +2,62 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-    static int T, N, M, K, ret;
+    static int N, M, K, ret;
     static int[] dy = {-1, 0, 1, 0};
     static int[] dx = {0, 1, 0, -1};
     static int[][] visited;
     static int[][] a;
 
-    static void DFS(int sy, int sx) {
-        visited[sy][sx] = 1;
+    static void DFS(int y, int x) {
+        visited[y][x] = 1;
         for(int i = 0; i < 4; i++) {
-            int ny = sy + dy[i];
-            int nx = sx + dx[i];
-            if(ny < 0 || nx < 0 || nx >= M || ny >= N) continue;
+            int ny = y + dy[i];
+            int nx = x + dx[i];
+
+            if(ny < 0 || nx < 0 || ny >= N || nx >= M) continue;
             if(a[ny][nx] == 1 && visited[ny][nx] == 0) {
                 DFS(ny, nx);
             }
         }
     }
 
+
+
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        String input = br.readLine();
-        T = Integer.parseInt(input);
 
-        for(int i = 0; i < T; i++) {
+        int T = Integer.parseInt(br.readLine());
+        while(T-- > 0) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            M = Integer.parseInt(st.nextToken());
             N = Integer.parseInt(st.nextToken());
+            M = Integer.parseInt(st.nextToken());
             K = Integer.parseInt(st.nextToken());
 
-            a = new int [N][M]; // 모든 값이 자동으로 0으로 초기화
-            visited = new int[N][M];
             ret = 0;
+            visited = new int[N][M];
+            a = new int[N][M];
 
-            for(int j = 0; j < K; j++) {
-                st = new StringTokenizer(br.readLine());
-                int x = Integer.parseInt(st.nextToken());
-                int y = Integer.parseInt(st.nextToken());
-                a[y][x] = 1;
-
+            for(int i = 0 ; i < K; i++) {
+                StringTokenizer st2 = new StringTokenizer(br.readLine());
+                int x = Integer.parseInt(st2.nextToken());
+                int y = Integer.parseInt(st2.nextToken());
+                a[x][y] = 1;
             }
-            for(int j = 0; j < N; j++) {
-                for(int k = 0; k < M; k++) {
-                    if(a[j][k] == 1 && visited[j][k] == 0) {
+
+            for(int i = 0; i < N; i++) {
+                for(int j = 0; j < M; j++) {
+                    if(a[i][j] == 1 && visited[i][j] == 0) {
                         ret++;
-                        DFS(j,k);
+                        DFS(i, j);
                     }
                 }
             }
-
             sb.append(ret).append("\n");
         }
 
         System.out.println(sb.toString());
-
     }
 }
 
